@@ -1,11 +1,219 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+
+<head><!-- Tout ce qu'il y a dans le head n'apparait pas sur le site directement. On rentre ici tous les réglages --> 
+	<meta charset="UTF-8"> <!-- Permet d'accepter les charactères spéciaux -->
+	<title>Rock Lama</title> <!-- Titre apparaissant dans l'onglet en haut du navigateur -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- Fontawesome kit -->
+	<script src="https://kit.fontawesome.com/48d763a536.js"></script>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Rock+Salt&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"><!-- google font -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Permet l'intégration -->
+
+
+	
+	<link rel="stylesheet" href="style.css"> <!-- lien avec le CSS doit toujours se trouver à la toute fin du head -->
+
 </head>
+
 <body>
-  <h1>Mon 1er site</h1>
+
+	<div class="navbar"> <!-- div permet de créer des conteneurs. class="" permet de donner un nom pour faciliter le css. Ici on fait la barre de navigation en haut du site -->
+		<div class="infosbar">
+
+			<marquee class="bfm"> <i class="fas fa-exclamation-triangle">&emsp;</i> FRESH NEWS&emsp;<i class="fas fa-exclamation-triangle"> Les festivaliers en liesse pour cette 3ème édition du Rock your Lama &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Jean-Daniel un riverain inquiet pour sa petite ville Saint Léon sur Vezère&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Le Maire Jean-Léopold de la bath a déclaré ce matin sur la place de la mairie :" On va se faire du bif" &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Un lama a été appréhendé par les forces de l'odre lors d'un contrôle routier. Sous l'emprise de l'alcool, il a fuit le festival pour retourner au Pérou. Il est actuellement entendu à la gendarmerie nationale &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+			</marquee>
+		
+		</div>
+		
+		<a href="index.html"><img src="images/logo.png" class="logo"> <!-- le logo du site dans la barre de navigation -->
+	
+		<div class="links">
+			
+			<a href="histoire.html"  class="link"> Notre Histoire </a> <!-- le target blank ouvre dans un autre onglet -->
+			<i class="icon fas fa-monument fa-2x"></i> <!-- fa-x2 est le multiplicateur de taille de l'icon -->
+			<a href="billeterie.html"  class="link"> Billeterie </a>
+			<i class="icon fas fa-ticket-alt fa-2x"></i>
+			<a href="contact.html" class="link"> Coin Presse</a> <!-- rassembler sous la class link, dès qu'on le modifiera dans le css, tout changera -->
+			<i class="icon fas fa-envelope fa-2x"></i>
+		
+		</div>
+	</div>
+
+<!-- création d'un bloc vide pour empêcher que la navbar epiète sur la bannière -->
+	<div class="compensateurnavbar"></div>
+
+
+	<!-- banner -->
+	<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(images/banner.jpg);">
+  <div class="container">
+    <h1>Rock your Lama <strong>1ère edition</strong> en <strong>Dordogne</strong>!</h1>
+    <a href="billeterie.html" class="btn btn-primary btn-lg abled" tabindex="-1" role="button" aria-disabled="true">Réservez !</a>
+  </div>
+
+  <!-- Décompte avant le Rock your Lama -->
+  <h1 id="demo"></h1>
+
+	<script>
+	// Set the date we're counting down to
+	var countDownDate = new Date("Jul 5, 2019 08:00:00").getTime();
+
+	// Update the count down every 1 second
+	var x = setInterval(function() {
+
+	  // Get today's date and time
+	  var now = new Date().getTime();
+	    
+	  // Find the distance between now and the count down date
+	  var distance = countDownDate - now;
+	    
+	  // Time calculations for days, hours, minutes and seconds
+	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	    
+	  // Output the result in an element with id="demo"
+	  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+	  + minutes + "m " + seconds + "s ";
+	    
+	  // If the count down is over, write some text 
+	  if (distance < 0) {
+	    clearInterval(x);
+	    document.getElementById("demo").innerHTML = "EXPIRED";
+	  }
+	}, 1000);
+	</script>
+	</div>
+
+
+
+	<div class="grandcadre" >
+
+		<div class="leftcadre">
+			<font color="white">
+			<h1> Festoche de grande envergure</h1> <!-- h les titres et p le texte ul les listes -->
+			<h2>A time for music, a time for lama</h2>
+			<p> Basé à <b> Saint-Léon-sur-Vezère</b> ce festoche est <b>the place to be ! </b>. Venez découvrir notre programmation de folie pour ce beau week-end de Juillet !</p>
+			</font>
+		</div>
+		
+		<div class="rcadre">
+			<iframe class="map"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202570.5604390945!2d0.799642434761421!3d45.03783799364858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ff57bccf820581%3A0x40665174817f910!2zMjQyOTAgU2FpbnQtTMOpb24tc3VyLVbDqXrDqHJl!5e0!3m2!1sen!2sfr!4v1560005959569!5m2!1sen!2sfr" width="100%" height="80px" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+
+	</div>	
+		
+	
+
+	<div class="conseils">
+
+		<div class="conseil0">
+
+			<div class= "conseil1">
+				<h3> Sommaire</h3>
+			
+			</div>
+
+		
+
+			<div class="conseil2">
+			
+				<ul>
+					<li><a href="#">Comment se rendre à notre festival qui déchire </li>
+					<li><a href="#">Découvrir notre Histoire et le Leader du Rock your Lama</a></li>
+					<li><a href="https://fr.wikipedia.org/wiki/Lama" target="_blank">C'est quoi un Lama ?</a></li>
+					<li><a href="https://fr.wikipedia.org/wiki/Rock" target="_blank">C'est quoi le Rock ?</a></li>
+					<li><a href="#">Découvrir notre Programmation</a></li>
+					<li><a href="#">C'est risqué ce festoche de ses morts ?</a></li>
+				</ul>
+		
+			</div>
+		
+
+		</div>
+		<div class="imgconseil">
+			<img class="img1" src="images/img1.jpg" >
+		</div>
+
+	
+
+	</div>
+		
+
+	
+
+	<!-- Deuxieme Cadre  -->
+
+<div class="grandcadre2">
+	<div class="leftcadre2"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/p-rKHMcpAH0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <!-- insertion de vidéo youtube avec les paramètres -->
+	</div>
+	
+	<div class= "rightcadre2">
+		<h2> <b>Pas besoins de mots, les images suffisent ! </b></h2>
+	</div>
+
+</div>
+
+<!-- sondage Typeforme -->
+
+		<a class="typeform-share button" href="https://thomasroger.typeform.com/to/GMBCgI" data-mode="popup" style="display:inline-block;text-decoration:none;background-color:#267DDD;color:white;cursor:pointer;font-family:Helvetica ,Arial,sans-serif;font-size:30px;line-height:50px;text-align:center;margin:40px;height:50px;padding:0px 33px;border-radius:90px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" target="_blank">Test ta Lamatitude ! </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+
+
+<!-- Footer pris sur boostrap -->
+
+
+
+<div class="footer">
+  
+  
+  
+  <div class="legal">
+  	<a href="#"><b>Conditions legales</b></a>
+  	<a href="#">Notre charte éco+</a>
+  	<a href="#">En cas d'accident</a>
+  	<a href="#">Assurances et mutuelles </a>
+  </div>
+
+  <div class="legal">
+  	<a href="#"><b>Outils utilisé pour créer le site</b></a>
+  	<a href="#">Le Wagon components</a>
+  	<a href="#">Boostrap components</a>
+  	<a href="#">Jcodepen components </a>
+  </div>
+
+  <div class="legal">
+  	<a href="#"><b>être le meilleur professeur:</b></a>
+  	<a href="#">Apprécier le site</a>
+  	<a href="#">Waw, quel talent ce Roger</a>
+  	<a href="#">ça mérite 20/20 ! </a>
+  </div>
+
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div> 
+
+
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
+</div>
+
+
+<!-- Scrript récupéré dans le get started de boostrap  -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 </html>
