@@ -1,0 +1,250 @@
+<html>
+<html>
+
+<head><!-- Tout ce qu'il y a dans le head n'apparait pas sur le site directement. On rentre ici tous les réglages --> 
+	<meta charset="UTF-8"> <!-- Permet d'accepter les charactères spéciaux -->
+	<title>Billeterie</title> <!-- Titre apparaissant dans l'onglet en haut du navigateur -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- Fontawesome kit -->
+	<script src="https://kit.fontawesome.com/48d763a536.js"></script>
+	<!-- Jquery script pour l'utiliser dans le body pour le compteur -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Rock+Salt&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"><!-- google font -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Permet l'intégration -->
+	
+	<link rel="stylesheet" href="style.css"> <!-- lien avec le CSS doit toujours se trouver à la toute fin du head -->
+
+</head>
+
+<body>
+	<div class="backgroundbilleterie">
+		
+		<div class="navbar"> <!-- div permet de créer des conteneurs. class="" permet de donner un nom pour faciliter le css. Ici on fait la barre de navigation en haut du site -->
+		<div class="infosbar">
+
+		<marquee class="bfm"> <i class="fas fa-exclamation-triangle">&emsp;</i> FRESH NEWS&emsp;<i class="fas fa-exclamation-triangle"> Les festivaliers en liesse pour cette 3ème édition du Rock your Lama &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Jean-Daniel un riverain inquiet pour sa petite ville Saint Léon sur Vezère&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Le Maire Jean-Léopold de la bath a déclaré ce matin sur la place de la mairie :" On va se faire du bif" &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Un lama a été appréhendé par les forces de l'odre lors d'un contrôle routier. Sous l'emprise de l'alcool, il a fuit le festival pour retourner au Pérou. Il est actuellement à la gendarmerie pour son procès verbal &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+		</marquee>
+		</div>
+		
+		<a href="index.html"><img src="images/logo.png" class="logo"> <!-- le logo du site dans la barre de navigation -->
+	
+		<div class="links">
+			<a href="histoire.html"  class="link"> Notre Histoire </a> <!-- le target blank ouvre dans un autre onglet -->
+			<i class="icon fas fa-monument fa-2x"></i> <!-- fa-x2 est le multiplicateur de taille de l'icon -->
+			<a href="billeterie.html"  class="link"> Billeterie </a>
+			<i class="icon fas fa-ticket-alt fa-2x"></i>
+			<a href="contact.html" class="link"> Coin Presse</a> <!-- rassembler sous la class link, dès qu'on le modifiera dans le css, tout changera -->
+			<i class="icon fas fa-envelope fa-2x"></i>
+	</div>
+
+	</div>
+
+
+	<div class="compensateurnavbar">
+	</div>
+
+	<h1 id="billet"> <b>Billeterie</b></h1>
+
+	<!-- mise en place du counter -->
+		<div class="compteur">
+			
+		
+			<div class="middle">
+				<div class="counting-sec">
+					<div class="inner-width">
+			
+						<div class="col">
+								<i class="fas fa-beer fa-2x"></i>
+							<div class="num">1500</div>
+							Litres de bières en prévision
+						</div>
+						
+						<div class="col">
+							<i class="fas fa-ticket-alt fa-2x"></i>
+							<div class="num">5246</div>
+							Nombre de participants
+						</div>
+			
+			
+						<div class="col">
+							<i class="fas fa-smile-beam fa-2x"></i>
+							<div class="num">172</div>
+							Lama rendu heureux
+						</div>
+
+						<!-- Script compteur -->
+		<script type="text/javascript">
+			 $(".num").counterUp({delay:0.1,time:4000});
+		</script>
+					
+					</div>
+				</div>
+			</div>
+
+			
+			
+			</div>
+		
+
+		<div class="price1 ">
+			<div class="p1" id="choco">
+				<h3> Lama de Chocolat </h3>
+				<ul>
+					<li>1 journée</li>
+					<li>Pass Bière 1 jour</li>
+					<li>Bracelet RYL</li>
+				</ul>
+				<p> La Base du Rock Your Lama <p>
+					<div class="prix">
+						 <a href="billeterie.html" class="btn btn-primary btn-lg abled" id="btnprix" tabindex="-1" role="button" aria-disabled="true">25€</a>
+					</div>
+			</div>
+
+
+
+
+			<div class="p1 " id="bronze">
+				<h3> Lama de Bronze </h3>
+				<ul>
+					<li>2 journées</li>
+					<li>Pass Bière 2 jour</li>
+					<li>Bracelet et Tampon RYL</li>
+				</ul>
+				<p> Rock Your Lama est fait pour toi <p>
+					<div class="prix">
+						 <a href="billeterie.html" class="btn btn-primary btn-lg abled" id="btnprix" tabindex="-1" role="button" aria-disabled="true">45€</a>
+					</div>
+
+			</div>
+
+		</div>
+
+		<div class="price2 ">
+		
+			<div class="p2 "  id="silver">
+				<h3> Lama d'Argent </h3>
+				<ul>
+					<li>Tous le festival ! </li>
+					<li>Pass Bière Premium</li>
+					<li>Une véritable couronne</li>
+				</ul>
+				
+				<p> Tu es seigneur Lama, les gens vont te vénèrent ! <p>
+					
+					<div class="prix">
+					
+						<button id="myBtn">25€</button>
+
+						<!-- The Modal -->
+						<div id="myModal" class="modal">
+
+					  <!-- Modal content -->
+						  <div class="modal-content">
+						  	
+						  	<div class="monmodal">
+						  	
+
+							    <span class="close">&times;</span>
+
+							 
+
+							    <h1 class="logo2">ZORRY</h1>
+							    <p class="logo3">le module pour subtiliser vos coordonnées bancaires n'est pas encore prêt. <br>Merci de réessayer plus tard <br><b> La Team Lama s'excuse pour ce désagrément</b></p> 
+
+							       <div class="logomodal">
+							   	 <img class="logop"src="images/logo2.png">
+							    </div>
+
+						  	</div>
+						  </div>
+						</div>
+					</div>
+
+			</div>
+		
+			<div class="p2 " id="gold">
+				<h3> Lama Dorée </h3>
+				
+ 				<ul>
+					<li>FULL FESTOCHE</li>
+					<li>COUPE FILE AU BAR ! PREMIUM</li>
+					<li>TOUS LES GOODIES QUE TU VEUX !</li>
+				</ul>
+				
+				<p> BIENVENUE A LA MAISON MAITRE LAMA !<p>
+				
+				<div class="prix">
+					 <a href="billeterie.html" class="btn btn-primary btn-lg abled" id="btnprix" tabindex="-1" role="button" aria-disabled="true">100€</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+<div class="counter-wrapper">
+  <ul class="flip-counter default" id="c1"></ul>
+</div>
+
+
+
+
+<div class="footer">
+ <!--  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>--> 
+  <div class="legal">
+  	<a href="#"><b>Conditions legales</b></a>
+  	<a href="#">Notre charte éco+</a>
+  	<a href="#">En cas d'accident</a>
+  	<a href="#">Assurances et mutuelles </a>
+
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
+</div>
+
+<!-- Scrript récupéré dans le get started de boostrap  -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}</script>
+
+
+
+
+</body>
+</html>
